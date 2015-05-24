@@ -2,7 +2,7 @@
 title: "project"
 author: "Marco"
 date: "17 de mayo de 2015"
-output: html_document
+output: pdf_document
 ---
 ## Downloading data
 
