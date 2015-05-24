@@ -100,13 +100,13 @@ model2</code></pre>
 ##                      Number of trees: 500
 ## No. of variables tried at each split: 7
 ## 
-##         OOB estimate of  error rate: 0.14%
+##         OOB estimate of  error rate: 0.15%
 ## Confusion matrix:
 ##      A    B    C    D    E  class.error
-## A 3348    0    0    0    0 0.0000000000
-## B    4 2274    0    1    0 0.0021939447
-## C    0    2 2051    1    0 0.0014605648
-## D    0    0    7 1923    0 0.0036269430
+## A 3345    3    0    0    0 0.0008960573
+## B    2 2277    0    0    0 0.0008775779
+## C    0    4 2049    1    0 0.0024342746
+## D    0    0    4 1924    2 0.0031088083
 ## E    0    0    0    2 2163 0.0009237875</code></pre>
 <p>The OOB estimate of error rate was 0.18%, maybe this OOB error rate underestimate the true error</p>
 </div>
@@ -118,10 +118,10 @@ table(testing$classe, predicted)</code></pre>
 <pre><code>##    predicted
 ##        A    B    C    D    E
 ##   A 2232    0    0    0    0
-##   B    1 1515    2    0    0
-##   C    0    3 1364    1    0
-##   D    0    0    3 1283    0
-##   E    0    0    0    4 1438</code></pre>
+##   B    0 1517    1    0    0
+##   C    0    1 1367    0    0
+##   D    0    0    3 1282    1
+##   E    0    0    0    0 1442</code></pre>
 <p>This model is very accurate, I got only 3 errors from 7846 tests. So I can perform the submissions</p>
 <p>Getting the answers for the submissions (these data were processed previously)</p>
 <pre class="r"><code>##predicted &lt;- predict(model2,test)
